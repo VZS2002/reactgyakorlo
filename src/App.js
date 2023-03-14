@@ -1,25 +1,27 @@
 import logo from './logo.svg';
 import './App.css';
+import Fooldal from './pages/Fooldal';
+import { Routes, Route,} from "react-router-dom";
+import Bemutatkozas from './pages/Bemutatkozas';
+import Kapcsolat from './pages/Kapcsolat';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+     
+     <Routes>
+        <Route exact path="/" element={<Fooldal />}></Route>
+        <Route exact path="/bemutatkozas" element = {<Bemutatkozas />}></Route>
+        <Route exact path="/kapcsolat" element={<Kapcsolat/>}></Route>
+
+     
+      </Routes>
+     
+     
+       
+    </>
   );
 }
+
 
 export default App;
